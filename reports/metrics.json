@@ -1,0 +1,88 @@
+{
+  "best_model": "Random Forest",
+  "model_comparison": {
+    "Logistic Regression": {
+      "cv_roc_auc": 0.8449,
+      "cv_pr_auc": 0.6556,
+      "test_roc_auc": 0.8421
+    },
+    "Random Forest": {
+      "cv_roc_auc": 0.8462,
+      "cv_pr_auc": 0.6559,
+      "test_roc_auc": 0.8459
+    },
+    "XGBoost": {
+      "cv_roc_auc": 0.8449,
+      "cv_pr_auc": 0.6561,
+      "test_roc_auc": 0.8441
+    }
+  },
+  "test": {
+    "roc_auc": 0.8459,
+    "pr_auc": 0.6602,
+    "threshold": 0.24,
+    "precision": 0.4992,
+    "recall": 0.8289,
+    "f1": 0.6231,
+    "confusion_matrix": [
+      [
+        724,
+        311
+      ],
+      [
+        64,
+        310
+      ]
+    ]
+  },
+  "business_assumptions": {
+    "offer_cost": 60.0,
+    "offer_success_rate": 0.3,
+    "months_saved": 12
+  },
+  "campaign_on_test_set": {
+    "threshold": 0.24,
+    "contacted": 621,
+    "churners_reached": 310,
+    "saved_revenue": 82807,
+    "campaign_cost": 37260,
+    "net_value": 45547
+  },
+  "contact_everyone_on_test_set": {
+    "threshold": 0.5,
+    "contacted": 1409,
+    "churners_reached": 374,
+    "saved_revenue": 97974,
+    "campaign_cost": 84540,
+    "net_value": 13434
+  },
+  "top_drivers": {
+    "Contract = Month-to-month": 0.0628,
+    "tenure": 0.054,
+    "InternetService = Fiber optic": 0.0492,
+    "PaymentMethod = Electronic check": 0.0257,
+    "MonthlyCharges": 0.0256,
+    "TotalCharges": 0.0234,
+    "Contract = Two year": 0.0234,
+    "InternetService = No": 0.0216,
+    "PaperlessBilling = Yes": 0.013,
+    "OnlineSecurity = Yes": 0.0109
+  },
+  "active_customers_by_risk_band": [
+    {
+      "risk_band": "High",
+      "customers": 485,
+      "revenue_at_risk": 271069.0
+    },
+    {
+      "risk_band": "Low",
+      "customers": 3586,
+      "revenue_at_risk": 231016.0
+    },
+    {
+      "risk_band": "Medium",
+      "customers": 1103,
+      "revenue_at_risk": 332636.0
+    }
+  ]
+}
